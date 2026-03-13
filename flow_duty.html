@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DutyCalc AI - Desktop Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-primary/30 bg-background-light dark:bg-background-dark px-6 py-3 shrink-0">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary dark:text-slate-100">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+<h2 class="text-lg font-bold leading-tight tracking-tight">DutyCalc AI</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary dark:hover:text-white" href="#">Dashboard</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary dark:hover:text-white" href="#">History</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary dark:hover:text-white" href="#">Tariffs</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="bg-slate-100 dark:bg-primary/20 border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Search calculations..." type="text"/>
+</div>
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-primary/20 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold" data-alt="User profile avatar placeholder">JD</div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- Left Sidebar: History & Tools -->
+<aside class="w-64 border-r border-slate-200 dark:border-primary/30 flex flex-col bg-slate-50 dark:bg-background-dark/50 overflow-y-auto">
+<div class="p-4 flex flex-col gap-6">
+<button class="flex items-center justify-center gap-2 w-full py-2.5 bg-primary text-white rounded-lg font-semibold text-sm hover:bg-primary/90">
+<span class="material-symbols-outlined text-lg">add</span>
+                    New Calculation
+                </button>
+<div class="flex flex-col gap-1">
+<p class="px-3 text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Recent Sessions</p>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/30 border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined text-primary dark:text-slate-100 text-lg">chat</span>
+<span class="text-sm font-medium truncate">500 Leather Shoes</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-400 text-lg">history</span>
+<span class="text-sm font-medium truncate">Car Import from Japan</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-400 text-lg">history</span>
+<span class="text-sm font-medium truncate">Electronics - Dubai</span>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<p class="px-3 text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Resources</p>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-400 text-lg">find_in_page</span>
+<span class="text-sm font-medium">HS Code Finder</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-400 text-lg">menu_book</span>
+<span class="text-sm font-medium">Tariff Guide 2024</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-400 text-lg">support_agent</span>
+<span class="text-sm font-medium">URA Support</span>
+</a>
+</div>
+</div>
+<div class="mt-auto p-4 border-t border-slate-200 dark:border-primary/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</div>
+</div>
+</aside>
+<!-- Main Chat Area -->
+<main class="flex-1 flex flex-col bg-background-light dark:bg-background-dark overflow-y-auto">
+<!-- Header for Session -->
+<div class="px-8 py-6 border-b border-slate-200 dark:border-primary/30 flex justify-between items-center">
+<div>
+<h1 class="text-xl font-bold dark:text-white">Duty Calculation: 500 Leather Shoes</h1>
+<p class="text-sm text-slate-500">Origin: China | HS Code: 6403.91.00</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 text-sm font-medium bg-slate-100 dark:bg-primary/20 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span> Export PDF
+                    </button>
+<button class="px-4 py-2 text-sm font-medium bg-slate-100 dark:bg-primary/20 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">share</span> Share
+                    </button>
+</div>
+</div>
+<!-- Chat Content -->
+<div class="flex-1 p-8 space-y-8 max-w-4xl mx-auto w-full">
+<!-- User Message -->
+<div class="flex gap-4 justify-end">
+<div class="flex flex-col items-end max-w-[80%]">
+<div class="bg-primary text-white p-4 rounded-xl rounded-tr-none">
+<p class="text-sm">Please calculate the import duty for 500 pairs of leather shoes from China. Total invoice value is $12,500 USD.</p>
+</div>
+<span class="text-[11px] text-slate-400 mt-1">10:42 AM</span>
+</div>
+</div>
+<!-- Bot Response -->
+<div class="flex gap-4">
+<div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary dark:text-slate-100">smart_toy</span>
+</div>
+<div class="flex flex-col gap-4 max-w-[90%]">
+<div class="bg-slate-100 dark:bg-primary/10 border border-slate-200 dark:border-primary/20 p-6 rounded-xl rounded-tl-none shadow-sm">
+<p class="text-sm mb-4">I've calculated the taxes for your shipment. Based on the <strong>EAC Common External Tariff (CET)</strong>, here is the breakdown for <strong>Leather Shoes (HS Code 6403.91.00)</strong>:</p>
+<!-- Tax Table -->
+<div class="bg-white dark:bg-background-dark/50 rounded-lg border border-slate-200 dark:border-primary/30 overflow-hidden mb-6">
+<table class="w-full text-left text-sm border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-primary/20 border-b border-slate-200 dark:border-primary/30">
+<th class="px-4 py-3 font-bold text-primary dark:text-slate-100">Tax Type</th>
+<th class="px-4 py-3 font-bold text-primary dark:text-slate-100 text-right">Rate</th>
+<th class="px-4 py-3 font-bold text-primary dark:text-slate-100 text-right">Amount (UGX)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-primary/20">
+<tr>
+<td class="px-4 py-3 text-slate-600 dark:text-slate-300">Import Duty</td>
+<td class="px-4 py-3 text-right">25%</td>
+<td class="px-4 py-3 text-right">11,718,750</td>
+</tr>
+<tr>
+<td class="px-4 py-3 text-slate-600 dark:text-slate-300">Value Added Tax (VAT)</td>
+<td class="px-4 py-3 text-right">18%</td>
+<td class="px-4 py-3 text-right">10,546,875</td>
+</tr>
+<tr>
+<td class="px-4 py-3 text-slate-600 dark:text-slate-300">Withholding Tax</td>
+<td class="px-4 py-3 text-right">6%</td>
+<td class="px-4 py-3 text-right">2,812,500</td>
+</tr>
+<tr>
+<td class="px-4 py-3 text-slate-600 dark:text-slate-300">Infrastructure Levy</td>
+<td class="px-4 py-3 text-right">1.5%</td>
+<td class="px-4 py-3 text-right">703,125</td>
+</tr>
+<tr class="bg-primary/5 dark:bg-primary/30 font-bold">
+<td class="px-4 py-4 text-primary dark:text-slate-100">Total Payable</td>
+<td class="px-4 py-4 text-right">--</td>
+<td class="px-4 py-4 text-right text-lg text-primary dark:text-slate-100">UGX 25,781,250</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex gap-4 p-4 bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-200 dark:border-yellow-900/30 rounded-lg">
+<span class="material-symbols-outlined text-yellow-600">info</span>
+<p class="text-xs text-yellow-800 dark:text-yellow-200">Values are converted using the current URA exchange rate of 1 USD = 3,750 UGX. Note that handling fees and clearing agent commissions are not included in this estimate.</p>
+</div>
+</div>
+<span class="text-[11px] text-slate-400 mt-1">10:43 AM</span>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-6 border-t border-slate-200 dark:border-primary/30">
+<div class="max-w-4xl mx-auto flex items-center gap-4 bg-white dark:bg-primary/10 border border-slate-300 dark:border-primary/40 rounded-xl px-4 py-2">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-2" placeholder="Ask follow-up question..." type="text"/>
+<button class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<p class="text-[10px] text-center text-slate-500 mt-2 italic">DutyCalc AI provides estimates for informational purposes. Final taxes are assessed by URA at port of entry.</p>
+</div>
+</main>
+<!-- Right Sidebar: Context & Checklist -->
+<aside class="w-80 border-l border-slate-200 dark:border-primary/30 bg-slate-50 dark:bg-background-dark/50 p-6 flex flex-col gap-8 overflow-y-auto">
+<!-- Context Box -->
+<section>
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Context Details</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary dark:text-slate-100">
+<span class="material-symbols-outlined text-lg">location_on</span>
+</div>
+<div>
+<p class="text-xs text-slate-500">Import Destination</p>
+<p class="text-sm font-semibold">Kampala, Uganda</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary dark:text-slate-100">
+<span class="material-symbols-outlined text-lg">sailing</span>
+</div>
+<div>
+<p class="text-xs text-slate-500">Shipping Mode</p>
+<p class="text-sm font-semibold">Sea Freight (FCL)</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary dark:text-slate-100">
+<span class="material-symbols-outlined text-lg">payments</span>
+</div>
+<div>
+<p class="text-xs text-slate-500">Incoterms</p>
+<p class="text-sm font-semibold">CIF Mombasa</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Document Checklist -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Document Checklist</h3>
+<span class="text-[10px] bg-primary text-white px-2 py-0.5 rounded-full">3 of 5</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-start gap-3 p-3 bg-white dark:bg-primary/20 rounded-lg border border-slate-200 dark:border-primary/40 shadow-sm">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<div>
+<p class="text-xs font-bold">Commercial Invoice</p>
+<p class="text-[10px] text-slate-500">Verified by bot</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-white dark:bg-primary/20 rounded-lg border border-slate-200 dark:border-primary/40 shadow-sm">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<div>
+<p class="text-xs font-bold">Packing List</p>
+<p class="text-[10px] text-slate-500">500 Pairs detected</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-white dark:bg-primary/20 rounded-lg border border-slate-200 dark:border-primary/40 shadow-sm">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<div>
+<p class="text-xs font-bold">Bill of Lading</p>
+<p class="text-[10px] text-slate-500">Electronic BL attached</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 border-2 border-dashed border-slate-300 dark:border-primary/40 rounded-lg">
+<span class="material-symbols-outlined text-slate-300 text-lg">circle</span>
+<div>
+<p class="text-xs font-bold text-slate-400">Certificate of Origin</p>
+<p class="text-[10px] text-red-400 font-medium">Action Required</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 border-2 border-dashed border-slate-300 dark:border-primary/40 rounded-lg">
+<span class="material-symbols-outlined text-slate-300 text-lg">circle</span>
+<div>
+<p class="text-xs font-bold text-slate-400">Import Declaration (IDF)</p>
+<p class="text-[10px] text-slate-400">Not generated yet</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Map Context -->
+<section class="mt-auto">
+<div class="rounded-xl overflow-hidden h-32 relative bg-slate-200 border border-slate-200 dark:border-primary/30">
+<div class="absolute inset-0 bg-cover bg-center opacity-70 grayscale contrast-125" data-alt="Stylized map showing transport route from China to Kampala" data-location="Kampala" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4B36sJxtVQ-UjQR6mHVuk7lcpRK0Yh0lSjTS1oCLgbSsolTjKPkVRlgYks0BW4_nUoJ5w0FUqy5Svm-vyXvq2el6cv8DYtnofQisQOL_AcCilP6ZUVY4dNmbnhSJOctGu0TfS1pMGIKx0J0puHZrMWk2vE9iP3PYq7B0bD2xK-bK6QSt1ktZ5TJeY0O79-8r0H3TMYkEO1wVj1YAcsd7yxcnXPSJHOb3J27U-A0lfS_j1BVusCUfvjcjN3ON4k6RJS620qONdI33T');"></div>
+<div class="absolute bottom-2 left-2 bg-white/90 dark:bg-background-dark/90 px-2 py-1 rounded text-[10px] font-bold shadow-sm">
+                        Route: Ningbo → Mombasa → Kampala
+                    </div>
+</div>
+</section>
+</aside>
+</div>
+</div>
+</body></html>

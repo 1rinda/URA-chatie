@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trade Report Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-20">
+<!-- Header -->
+<header class="flex items-center bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-4 sticky top-0 z-10">
+<div class="text-primary dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 ml-2">Trade Report</h1>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-primary dark:text-white">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col gap-6 p-4">
+<!-- Shipment Summary Card -->
+<section>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold mb-4">Shipment Summary</h2>
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<div class="w-full bg-center bg-no-repeat aspect-[16/6] bg-cover" data-alt="Commercial cargo ship at industrial port terminal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCjAoDWyWa9XD2lnWPw5xSzR5g4TScD2gOROYzlT3css3DJe2ESpRI5fP3g7rDSZZDoLt25638hxmkhXs3UIikHQIjAGnevCr2E0WjZm5m638s5IAMd9ezN0XRN9xW-RGHfV7xCs6Vszc8q_UnrXBURtvQKX302rY6vj-BQmrCIbpOAi7UHMZpXZnOiy6pCbHsQ-63gWal8QlMKc5YhssMuDRXpJxunLrMz_Ri4_aeJyUlEacBlAwK4KX836X6Rn-hHd1WPRz09A0QC");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-3 p-5">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-primary dark:text-primary/80 text-sm font-semibold uppercase tracking-wider">Shipment ID</p>
+<p class="text-slate-900 dark:text-white text-xl font-bold">TRD-992841</p>
+</div>
+<span class="px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full text-xs font-bold">IN TRANSIT</span>
+</div>
+<div class="grid grid-cols-1 gap-4 pt-2 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Origin</p>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium">Port of Shanghai, China</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl">near_me</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Destination</p>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium">Port of Lagos, Nigeria</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Itemized Duty Breakdown -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-slate-900 dark:text-white text-xl font-bold">Duty Breakdown</h2>
+<span class="text-primary font-bold text-lg">$14,520.00</span>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-4 flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<span class="text-slate-600 dark:text-slate-400 text-sm">Import Duty (20%)</span>
+<span class="text-slate-900 dark:text-white font-semibold">$8,400.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-slate-600 dark:text-slate-400 text-sm">VAT (7.5%)</span>
+<span class="text-slate-900 dark:text-white font-semibold">$3,150.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-slate-600 dark:text-slate-400 text-sm">Withholding Tax</span>
+<span class="text-slate-900 dark:text-white font-semibold">$2,100.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-slate-600 dark:text-slate-400 text-sm">Surcharge &amp; Levies</span>
+<span class="text-slate-900 dark:text-white font-semibold">$870.00</span>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-center">
+<span class="text-slate-900 dark:text-white font-bold">Total Payable</span>
+<span class="text-primary dark:text-white font-extrabold text-xl">$14,520.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Document Compliance Status -->
+<section>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold mb-4">Compliance Status</h2>
+<div class="grid grid-cols-1 gap-3">
+<div class="flex items-center justify-between bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<div>
+<p class="text-slate-900 dark:text-white font-medium text-sm">TIN Verification</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Verified 02/24/2024</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<div>
+<p class="text-slate-900 dark:text-white font-medium text-sm">Commercial Invoice</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Uploaded &amp; Matched</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-500">pending</span>
+<div>
+<p class="text-slate-900 dark:text-white font-medium text-sm">Packing List</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Awaiting Final Stamp</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Action Button -->
+<section class="mt-4">
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">download</span>
+                    Download PDF Report
+                </button>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-6 pt-2 z-20">
+<div class="flex gap-2 max-w-md mx-auto">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="mobile_dashboard.html">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">dashboard</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Dashboard</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="mobile_procedures.html">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Shipments</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary dark:text-white" href="mobile_report.html">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">description</span>
+</div>
+<p class="text-[10px] font-bold leading-normal tracking-wide">Reports</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Profile</p>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

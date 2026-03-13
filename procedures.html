@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trade Information Portal - Trade Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 flex-shrink-0 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark flex flex-col justify-between">
+<div class="p-4 flex flex-col gap-6">
+<div class="flex items-center gap-3 px-2">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">account_balance</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">Trade Assistant</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Information Portal</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined text-xl">home</span>
+<span class="text-sm font-medium">Home</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary transition-colors" href="procedures.html">
+<span class="material-symbols-outlined text-xl">description</span>
+<span class="text-sm font-semibold">Procedures</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="calculator.html">
+<span class="material-symbols-outlined text-xl">tag</span>
+<span class="text-sm font-medium">HS Codes</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="calculator.html">
+<span class="material-symbols-outlined text-xl">percent</span>
+<span class="text-sm font-medium">Tariffs</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+</div>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 px-2 py-3 rounded-xl bg-slate-50 dark:bg-slate-900">
+<div class="size-8 rounded-full bg-slate-300 dark:bg-slate-700 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile picture for Trade Officer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABwFJa1Qjx1Mw5E9lWqVKaUuyeCM4O9aE2uZINcdIc8ee_SlbfygpK9uU-FSV5Bn8-jy9BbLWm9drQMytOjcm4KbvBKHV7mJcnT5A1qmnLQ7ZfKtR0naWraMNIKjJkv80T8Em8o9UWIh1Ledq4DZL-AktONETIN0lrcJrbp384rKojQsxW5I0KYQN7_ROzuPDZH0qG7Af4cj6YCafYbRr07gRq8XVfD5Hx0Fsww4aAjA1lt9zjEfss3fEIczjvBpPK5OIJbg_jIUJ7"/>
+</div>
+<div class="flex flex-col overflow-hidden">
+<p class="text-xs font-bold truncate">John Smith</p>
+<p class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider">Customs Agent</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Top Header -->
+<header class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-8 flex items-center justify-between z-10">
+<div class="flex items-center gap-4 text-primary dark:text-slate-100">
+<h2 class="text-lg font-bold leading-tight tracking-tight">Trade Information Portal</h2>
+</div>
+<div class="flex items-center gap-6 flex-1 max-w-2xl px-12">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary placeholder:text-slate-400" placeholder="Search procedures, HS codes or regulations..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="size-10 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-8 space-y-8">
+<!-- Procedures Section -->
+<section>
+<div class="flex items-end justify-between mb-6">
+<div>
+<h3 class="text-3xl font-black text-slate-900 dark:text-slate-50 tracking-tight">Clearance of imports at Malaba</h3>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Standard Operating Procedures for border clearance through the Malaba OSBP.</p>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+                            Export SOP
+                        </button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+<!-- Step 1 -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-8xl">verified_user</span>
+</div>
+<div class="size-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">inventory</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/60">Step 01</span>
+<h4 class="text-base font-bold mt-1 text-slate-900 dark:text-slate-100">Document Verification</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Verification of commercial invoices, packing lists, and import permits by clearing agents.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-8xl">upload_file</span>
+</div>
+<div class="size-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">description</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/60">Step 02</span>
+<h4 class="text-base font-bold mt-1 text-slate-900 dark:text-slate-100">Customs Declaration</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Electronic submission of declaration through the Single Window System and bond allocation.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-8xl">search_check</span>
+</div>
+<div class="size-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/60">Step 03</span>
+<h4 class="text-base font-bold mt-1 text-slate-900 dark:text-slate-100">Inspection &amp; Valuation</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Physical inspection of goods and cargo scanning. Verification of tax valuations and assessments.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-8xl">payments</span>
+</div>
+<div class="size-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/60">Step 04</span>
+<h4 class="text-base font-bold mt-1 text-slate-900 dark:text-slate-100">Duty Payment &amp; Release</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Final payment of taxes and duties. Issuance of release orders and exit confirmation at the gate.</p>
+</div>
+</div>
+</section>
+<!-- HS Code Database Section -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50">HS Code Database</h3>
+<p class="text-slate-500 dark:text-slate-400 mt-1">EAC Common External Tariff (CET) 2022 Version</p>
+</div>
+<div class="flex gap-2">
+<div class="flex rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800">
+<button class="px-4 py-2 bg-white dark:bg-slate-900 text-sm font-semibold border-r border-slate-200 dark:border-slate-800">All Chapters</button>
+<button class="px-4 py-2 bg-slate-50 dark:bg-slate-800 text-sm font-medium">Favorites</button>
+</div>
+</div>
+</div>
+<div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50">
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">HS Code</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Description</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-center">Unit</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">Duty Rate</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+<!-- Row 0% -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm font-mono font-bold text-primary dark:text-slate-100">0101.21.00</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 max-w-md">Pure-bred breeding horses</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-500 text-center">NO</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">0%</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-xl">info</span></button>
+</td>
+</tr>
+<!-- Row 10% -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm font-mono font-bold text-primary dark:text-slate-100">8415.10.10</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 max-w-md">Air conditioning machines for use in motor vehicles</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-500 text-center">U</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400">10%</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-xl">info</span></button>
+</td>
+</tr>
+<!-- Row 25% -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm font-mono font-bold text-primary dark:text-slate-100">6203.11.00</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 max-w-md">Men's or boys' suits of wool or fine animal hair</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-500 text-center">KG/U</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400">25%</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-xl">info</span></button>
+</td>
+</tr>
+<!-- Row 35% -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm font-mono font-bold text-primary dark:text-slate-100">1704.90.00</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 max-w-md">Sugar confectionery (including white chocolate), not containing cocoa</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-500 text-center">KG</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400">35%</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-xl">info</span></button>
+</td>
+</tr>
+<!-- Row Custom -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm font-mono font-bold text-primary dark:text-slate-100">8703.23.90</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 max-w-md">Other vehicles with spark-ignition internal combustion reciprocating piston engine</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-500 text-center">U</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400">25%</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-xl">info</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 flex items-center justify-between">
+<p class="text-xs text-slate-500 dark:text-slate-400">Showing 1-5 of 12,482 entries</p>
+<div class="flex gap-1">
+<button class="size-8 flex items-center justify-center rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded bg-primary text-white text-xs font-bold">1</button>
+<button class="size-8 flex items-center justify-center rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-xs font-medium">2</button>
+<button class="size-8 flex items-center justify-center rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>
