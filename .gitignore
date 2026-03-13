@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+.env
+
+# Project specific
+backend/__pycache__/
+backend/.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+.gemini/
+stitch.zip
