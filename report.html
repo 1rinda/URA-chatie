@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trade Analytics - Shipment TRD-992841</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hidden md:flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<div>
+<h1 class="font-bold text-slate-900 dark:text-white leading-tight">Global Trade</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">Trade Manager</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary dark:text-primary dark:bg-primary/20" href="report.html">
+<span class="material-symbols-outlined">directions_boat</span>
+<span class="text-sm font-medium">Shipments</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="report.html">
+<span class="material-symbols-outlined">description</span>
+<span class="text-sm font-medium">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="procedures.html">
+<span class="material-symbols-outlined">folder_open</span>
+<span class="text-sm font-medium">Documents</span>
+</a>
+<div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</div>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col">
+<!-- Header -->
+<header class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-8 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<h2 class="text-lg font-bold tracking-tight">Trade Analytics</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm w-64 focus:ring-2 focus:ring-primary/20" placeholder="Search ID, route..." type="text"/>
+</div>
+<button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-500">person</span>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-8 space-y-8">
+<!-- Breadcrumbs & Actions -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2 text-xs font-medium text-slate-500 uppercase tracking-wider">
+<span>Reports</span>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-primary">Shipment TRD-992841</span>
+</div>
+<h1 class="text-3xl font-black text-slate-900 dark:text-white">Shipment Summary: TRD-992841</h1>
+<div class="flex items-center gap-2">
+<span class="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+<p class="text-slate-600 dark:text-slate-400 font-medium">In Transit • Shanghai to Lagos</p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg flex items-center gap-2 text-sm font-bold bg-white dark:bg-slate-800 hover:bg-slate-50 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm">refresh</span>
+                            Refresh Data
+                        </button>
+<button class="px-4 py-2 bg-primary text-white rounded-lg flex items-center gap-2 text-sm font-bold hover:bg-primary/90 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm">download</span>
+                            Download PDF
+                        </button>
+</div>
+</div>
+<!-- KPI Overview -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm space-y-2">
+<p class="text-sm font-medium text-slate-500">Total Duty Payable</p>
+<div class="flex items-baseline gap-2">
+<p class="text-3xl font-bold text-primary">$14,520.00</p>
+<span class="text-xs font-semibold text-emerald-600 bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 rounded-full">Paid</span>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm space-y-2">
+<p class="text-sm font-medium text-slate-500">Origin Port</p>
+<p class="text-2xl font-bold">Shanghai (CNSHA)</p>
+<p class="text-xs text-slate-400 font-medium">ETD: Oct 12, 2023</p>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm space-y-2">
+<p class="text-sm font-medium text-slate-500">Destination Port</p>
+<p class="text-2xl font-bold">Lagos (NGLOS)</p>
+<p class="text-xs text-slate-400 font-medium">ETA: Nov 04, 2023</p>
+</div>
+</div>
+<!-- Main Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Duty Breakdown -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-hidden">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<h3 class="font-bold text-slate-900 dark:text-white">Itemized Duty Breakdown</h3>
+<span class="material-symbols-outlined text-slate-400">info</span>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-center py-2 border-b border-slate-50 dark:border-slate-800/50">
+<span class="text-slate-600 dark:text-slate-400">Import Duty</span>
+<span class="font-bold">$8,400.00</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-slate-50 dark:border-slate-800/50">
+<span class="text-slate-600 dark:text-slate-400">Value Added Tax (VAT)</span>
+<span class="font-bold">$4,850.00</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-slate-50 dark:border-slate-800/50">
+<span class="text-slate-600 dark:text-slate-400">Withholding Tax (WHT)</span>
+<span class="font-bold">$720.00</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-slate-50 dark:border-slate-800/50">
+<span class="text-slate-600 dark:text-slate-400">Levies &amp; Port Charges</span>
+<span class="font-bold">$550.00</span>
+</div>
+<div class="flex justify-between items-center pt-4">
+<span class="text-lg font-bold text-slate-900 dark:text-white">Total Charges</span>
+<span class="text-2xl font-black text-primary">$14,520.00</span>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-4 mx-6 mb-6 rounded-lg">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">account_balance_wallet</span>
+<p class="text-xs text-slate-500 leading-relaxed">Payments were processed through Global Trade Settlement portal on Oct 14, 2023. Transaction ID: #TXN-449102</p>
+</div>
+</div>
+</div>
+<!-- Compliance Checklist -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800">
+<h3 class="font-bold text-slate-900 dark:text-white">Document Compliance Checklist</h3>
+</div>
+<div class="p-6 space-y-6">
+<!-- TIN Verification -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">TIN Verification</h4>
+<p class="text-xs text-slate-500">Tax Identification Number matched</p>
+</div>
+</div>
+<span class="text-xs font-bold px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full">Verified</span>
+</div>
+<!-- Commercial Invoice -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Commercial Invoice</h4>
+<p class="text-xs text-slate-500">Digital copy received and validated</p>
+</div>
+</div>
+<span class="text-xs font-bold px-3 py-1 bg-blue-100 text-blue-700 rounded-full">Uploaded</span>
+</div>
+<!-- Packing List -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center text-amber-600">
+<span class="material-symbols-outlined">ink_pen</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Packing List</h4>
+<p class="text-xs text-slate-500">Pending final customs endorsement</p>
+</div>
+</div>
+<span class="text-xs font-bold px-3 py-1 bg-amber-100 text-amber-700 rounded-full">Awaiting Stamp</span>
+</div>
+<div class="mt-4 pt-6 border-t border-slate-100 dark:border-slate-800">
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full w-[66%]"></div>
+</div>
+<div class="flex justify-between mt-2">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Compliance Status</p>
+<p class="text-xs font-bold text-primary">66% Complete</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Map Section Placeholder -->
+<div class="rounded-xl overflow-hidden relative h-64 border border-slate-200 dark:border-slate-800">
+<div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
+<div class="text-center space-y-2">
+<span class="material-symbols-outlined text-4xl text-slate-400">map</span>
+<p class="text-sm font-medium text-slate-500">Live Tracking Map (Shanghai to Lagos Route)</p>
+<img alt="Shipment map route from Shanghai to Lagos" class="absolute inset-0 w-full h-full object-cover opacity-20" data-alt="Abstract world map showing trade route between Shanghai and Lagos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgxJk6AoRsiiHcxTwSgIsIH7vMJSYXKkDXNi-moSN5ZmJZUuJ_Ir1puSNzySq6vLXJvkfo9e2ZpMAnm2dIzsaOhLyezB2LxFTn20MHrqMAb4qWzsOh-WUmO0XimtMB4arh339tEEk9WEj5k6WfRPgxXhGzjCzmETdgq7emQ4LDTo0YKuWMDUwzMvUhx5QuiUZ_0TFe9NZ_HrfY5mKdO3c7qmlPi5iJz9VnJ1YRSUmgRv9cyK_Rg0xfX09VNgANhk_7L_EMHIIfjUka"/>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur p-4 rounded-lg shadow-lg">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Vessel Name</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">directions_boat</span>
+<span class="font-bold text-sm">OCEAN ADVENTURER V.122</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
